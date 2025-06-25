@@ -5,9 +5,13 @@ import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
 import {deliveryOptions} from '../data/deliveryOptions.js';
 
 
+function renderOrderSummary(){
+
+
+
+
 
 let cartSummaryHTML='';
-
 
 cart.forEach((cartItem)=>{
 const productId=cartItem.productId;
@@ -131,5 +135,9 @@ link.addEventListener('click',()=>{
 element.addEventListener('click',()=>{
   const{productId,deliveryOptionId}=element.dataset;
 updateDeliveryOption(productId,deliveryOptionId);
+renderOrderSummary();
 })
     })
+  }
+
+  renderOrderSummary();
