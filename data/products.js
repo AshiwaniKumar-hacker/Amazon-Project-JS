@@ -94,7 +94,7 @@ products=JSON.parse(xhr.response).map((productDetails)=>{
 return new Product(productDetails);
 });
 
-console.log(products);
+console.log('loadProduct');
 
 fun();
  })
